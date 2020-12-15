@@ -3,8 +3,10 @@ package controller;
 import java.util.ArrayList;
 
 import constants.Constants;
+import main.Main;
 import model.Player;
 import view.View;
+import view.ViewMockAutomation;
 
 public abstract class Game {
 	
@@ -19,7 +21,7 @@ public abstract class Game {
 		players = new ArrayList<>();
 		winner = null;
 		
-		battleShipView = new View();
+		battleShipView = Main.AUTOMATION ? new ViewMockAutomation(): new View();
 	}
 	
 	public ArrayList<Player> getPlayers() {

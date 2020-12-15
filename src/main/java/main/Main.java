@@ -5,8 +5,15 @@ import controller.PlayerVersusPlayer;
 
 public class Main {
 	
+	public static String AUTO_FILE = "";
+	public static boolean AUTOMATION = false;
+
 	/** Main class which creates the game. **/
 	public static void main(String args[]) {
+		if (args.length > 0) {
+			AUTO_FILE = args[0];
+			AUTOMATION = true;
+		}
 		Game controller = new PlayerVersusPlayer();
 		controller.playOneGame();
 		

@@ -16,6 +16,10 @@ public class View {
 	private String input;
 	private Scanner scanner = new Scanner(System.in);
 	
+	protected void setScanner(Scanner sc) {
+		scanner = sc;
+	}
+	
 	public View() {}
 	
 	public void showMsg(String msg) {
